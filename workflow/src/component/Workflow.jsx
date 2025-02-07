@@ -154,10 +154,6 @@ const Workflow = () => {
     [setEdges]
   );
 
-  const onChange = (evt) => {
-    setColorMode(evt.target.value);
-  };
-
   const onNodeClick = useCallback((_, node) => {
     setSelectedNode(node);
   }, []);
@@ -236,13 +232,6 @@ const Workflow = () => {
           <Background />
           <Controls />
           <MiniMap />
-          <Panel position="top-left">
-            <select onChange={onChange} data-testid="colormode-select">
-              <option value="dark">dark</option>
-              <option value="light">light</option>
-              <option value="system">system</option>
-            </select>
-          </Panel>
         </ReactFlow>
       </div>
 
