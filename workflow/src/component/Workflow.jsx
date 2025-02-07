@@ -190,7 +190,7 @@ const Workflow = () => {
     <div className="workflow-builder">
       {/* Toolbar */}
       <div className="toolbar">
-        <h2>Add Node</h2>
+        <h2>Work Flow</h2>
         <div className="toolbar-buttons">
           <button
             onClick={() => addNewNode("task")}

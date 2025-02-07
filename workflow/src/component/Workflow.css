@@ -62,12 +62,12 @@
     background-color: #2563eb;
   }
   
-  .condition-button {
-    background-color: #10b981;
+  .add-button.condition-button {
+    background-color: #FFBF00;
   }
   
-  .condition-button:hover {
-    background-color: #059669;
+  .add-button.condition-button:hover {
+    background-color: #FFEA00;
   }
   
   .notification-button {
