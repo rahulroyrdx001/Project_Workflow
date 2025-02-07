@@ -1,0 +1,273 @@
+/* WorkflowBuilder.css */
+.workflow-builder {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Toolbar styles */
+  .toolbar {
+    width: 200px;
+    background-color: #0b131b;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    transition: transform 0.3s ease;
+  }
+  @media (max-width: 768px) {
+    .toolbar {
+      position: absolute;
+      z-index: 10;
+      height: 100%;
+      transform: translateX(-100%);
+    }
+  
+    .toolbar:hover,
+    .toolbar:focus-within {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .toolbar h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .toolbar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.2s;
+  }
+  
+  .task-button {
+    background-color: #3b82f6;
+  }
+  
+  .task-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .condition-button {
+    background-color: #10b981;
+  }
+  
+  .condition-button:hover {
+    background-color: #059669;
+  }
+  
+  .notification-button {
+    background-color: #8b5cf6;
+  }
+  
+  .notification-button:hover {
+    background-color: #7c3aed;
+  }
+  
+  /* Canvas styles */
+  .workflow-canvas {
+    flex: 1;
+    height: 100%;
+  }
+  
+  /* Node styles */
+  .workflow-node {
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 100px;
+    max-width: 200px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* width: 100%; */
+  }
+  @media (max-width: 480px) {
+    .workflow-node {
+      min-width: 150px;
+    }
+  }
+  .node-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .node-content {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-node {
+    border: 2px solid #3b82f6;
+  }
+  
+  /* new add taskbutton*/
+  .task-button {
+    background-color: #3b82f6;
+  }
+  .task-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .condition-node {
+    border: 2px solid #10b981;
+  }
+  /* new condition button */
+  .condition-button {
+    background-color: #10b981;
+  }
+  
+  .condition-button:hover {
+    background-color: #059669;
+  }
+  .notification-node {
+    border: 2px solid #8b5cf6;
+  }
+  /* new notification button */
+  .notification-button {
+    background-color: #8b5cf6;
+  }
+  
+  .notification-button:hover {
+    background-color: #7c3aed;
+  }
+  
+  /* Configuration panel styles */
+  .config-panel {
+    position: fixed;
+    justify-content: space-around;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 380px;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+  }
+  @media (max-width: 1024px) {
+    .config-panel {
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .config-panel {
+      width: 100%;
+    }
+  }
+  
+  .config-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .config-panel-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .close-button:hover {
+    color: #333;
+  }
+  
+  .config-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%; /*new added*/
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+  
+  .update-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .update-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .delete-button{
+      background-color: #f63b3b;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: 10px;
+      width: 100%;
+    
+  }
+  
+  .delete-button:hover {
+    background-color: #eb2546;
+  }
+  
+  .workflow-minimap {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .workflow-minimap {
+      display: none;
+    }
+  }
