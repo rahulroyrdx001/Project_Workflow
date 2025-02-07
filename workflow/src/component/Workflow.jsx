@@ -14,7 +14,7 @@ import {
 } from "@xyflow/react";
 import { PlusIcon } from "lucide-react";
 import "@xyflow/react/dist/style.css";
-import "./workflow.CSS";
+import "./workflow.css";
 
 // Custom node components
 const TaskNode = ({ data }) => (
